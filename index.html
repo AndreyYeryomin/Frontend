@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Civil War</title>
+</head>
+<body>
+
+	<div class="field">
+		<div class="iron_man"></div>
+		<div class="d1"></div>
+		<div class="captain"></div>		
+		<div class="d2"></div>
+		<div class="back"></div>
+		<div class="rise1"></div>
+		<div class="rise2"></div>
+		
+
+	</div>
+	<style>
+.field{
+	width: 800px;
+	height: 500px;
+	border: 1px solid black;
+	background-image: none;
+
+
+}
+.iron_man{
+	background-image: url(IronMan.png);
+	background-position: 0px 0px;
+	position: absolute;
+	top: 250px;
+	left: 50px;
+	width: 138px;
+	height:231px;
+}
+
+.captain{
+		background-image: url(CaptainAmerica.png);
+			background-position: 0px 0px;
+	transform: rotateY(180deg);
+	position: absolute;
+	top: 262px;
+	left: 515px;
+	width: 158px;
+	height:  215px;
+}
+.d1{
+	width: 150px;
+	height: 150px;
+	background-image: url(dialog11.png);
+	background-size: 100% 100%;
+	top:143px;
+	left: 123px;
+	position: absolute;
+	opacity: 0;
+}
+.d2{
+	width: 150px;
+	height: 150px;
+	background-image: url(dialog2.png);
+	background-size: 100% 100%;
+	top:140px;
+	left: 394px;
+	position: absolute;
+	opacity: 0;
+}
+.back{
+		width: 800px;
+	height: 500px;
+	background-image: none;
+	position: absolute;
+}
+
+.rise1{
+	background-image: url(IronMan.png);
+	background-position: -1608px -74px;
+	transform: rotateY(180deg);
+	position: absolute;
+	opacity: 0;
+  top: 243px;
+  left: 147px;
+	width: 157px;
+  height: 93px;
+}
+.rise2{
+	background-image: url(IronMan.png);
+	background-position: -1608px -74px;
+	transform: rotateZ(30deg);
+	position: absolute;
+  top: 232px;
+  left: 427px;
+	width: 157px;
+  height: 93px;
+  opacity: 0;
+
+}
+.field:hover .back{
+	 animation-name: back;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+    z-index: 100;
+}
+.field:hover .d1{
+	 animation-name: d1;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+}
+.field:hover .d2{
+	 animation-name: d2;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+    animation-timing-function: linear;
+}
+
+
+.field:hover .rise1{
+	 animation-name: rise1;
+    animation-duration: 3s;
+    animation-delay: 4s;
+    animation-timing-function: linear;
+}
+.field:hover .rise2{
+	 animation-name: rise2;
+    animation-duration: 3s;
+    animation-delay: 6.85s;
+    animation-timing-function: linear;
+}
+.field:hover .iron_man{
+	background-image: url(IronMan.png);
+   background-position: -641px 0px;
+    position: absolute;
+    top: 199px;
+    left: 50px;
+    width: 232px;
+    height: 288px;
+    opacity: 100;
+    transition-delay: 4s;
+}
+.field:hover .captain{
+	    background-image: url(CaptainAmerica.png);
+    background-position: -890px -276px;
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 262px;
+    left: 515px;
+    width: 167px;
+    height: 215px;
+    transition-delay: 6.7s;
+}
+
+
+
+
+@keyframes back{
+0%{ 
+background-image: none;
+}
+50%{
+background-image: url(civil.jpg);
+background-size: 100% 100%;
+}
+100%{
+background-image: none;
+}
+}
+@keyframes d1{
+0%{ 
+opacity: 0;
+}
+50%{
+opacity: 100;
+}
+100%{
+opacity: 0;
+}
+
+}
+@keyframes d2{
+0%{ 
+opacity: 0;
+}
+50%{
+opacity: 100;
+}
+100%{
+opacity: 0;
+}
+}
+
+@keyframes rise1{
+0%{ 
+opacity: 0;
+left:147px;
+}
+95%{
+opacity: 100;
+left:369px;
+}
+100%{
+opacity: 0;
+left:369px;
+}
+}
+@keyframes rise2{
+0%{ 
+top: 232px;
+left: 427px;
+opacity: 0;
+}
+95%{
+top: 118px;
+  left: 188px;
+opacity: 100;
+}
+100%{    
+	top: 118px;
+  left: 188px;
+opacity: 0;
+}
+}
+
+	</style>
+
+
+</body>
+</html>
