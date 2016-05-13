@@ -1,0 +1,53 @@
+@list: red, yellow, blue, green, black, grey, gold;
+@item-width: 50px;
+@item-height: 50px;
+
+.myLoop (@index) when (@index < 7) {
+@item: extract(@list, @index);
+  &.sq_@{index}   {
+.fb1 (@index) when (@index < 1){
+@fib:1;
+width: @fib * @item-width;
+height: @fib * @item-height;
+background-color: cyan;
+position: absolute;
+top:100px;
+left: 150px;
+}
+.fb1 (@index) when (@index = 1){
+@fib:1;
+width: @fib * @item-width;
+height: @fib * @item-height;
+background-color: @item;
+position: absolute;
+top:100px;
+left: 200px;
+}
+
+.fb1 (@index) when (@index = 2){
+@fib: 2;
+width: @fib * @item-width;
+height: @fib * @item-height;
+background-color: @item;
+position: absolute;
+top:0px;
+left:150px;
+	}  
+	.fb1 (@index) when (@index > 2){
+@fib: (@index - 1) + (@index - 2);
+width: @fib * @item-width;
+height: @fib * @item-height;
+background-color: @item;
+
+	}  
+
+.fb1(@index);
+ }
+
+.myLoop(@index + 1 );
+
+}
+.myLoop (0);
+body{
+	margin:0;
+}

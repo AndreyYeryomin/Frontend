@@ -1,0 +1,24 @@
+	@color: blue;
+	body{
+	font-size: 100px;
+
+@width: 10px;
+@sss: 12em;
+.red{
+	color:@color;
+}
+
+p{
+	color:@color;
+}
+
+.bla{
+	&:hover{
+		color:@color;
+	}
+	&.red1{
+		background-color: #fff;
+		width: @width*@sss;
+	}
+}
+}

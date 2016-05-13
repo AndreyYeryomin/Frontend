@@ -1,0 +1,21 @@
+@list: red, yellow, blue, green;
+@item-width: 100px;
+@item-height: 100px;
+.myLoop (@index) when (@index > 0) {
+  @item: extract(@list, @index);
+  &.sq_@{index}   {
+    width: @index * @item-width;
+    height: @index * @item-height;
+		background-color: @item;
+		position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+margin: auto;
+  }
+  /* выполняем слудующую итерацию рекурсивно */
+  .myLoop(@index - 1 );
+}
+/* запускаем цикл с нуля */
+.myLoop (4);
