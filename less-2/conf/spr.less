@@ -1,0 +1,36 @@
+.sprite("f.png", @dimension: false) {
+   @image_height: 513px;
+   @image_width: 513px;
+  .size() when (@dimension) {
+    height: 513px;
+    width: 513px;
+  }
+  .size;
+  background-image: url("/images/spr.png");
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+}
+.sprite("ff.png", @dimension: false) {
+   @image_height: 413px;
+   @image_width: 413px;
+  .size() when (@dimension) {
+    height: 413px;
+    width: 413px;
+  }
+  .size;
+  background-image: url("/images/spr.png");
+  background-repeat: no-repeat;
+  background-position: 0px -513px;
+}
+.sprite("t.png", @dimension: false) {
+   @image_height: 204px;
+   @image_width: 204px;
+  .size() when (@dimension) {
+    height: 204px;
+    width: 204px;
+  }
+  .size;
+  background-image: url("/images/spr.png");
+  background-repeat: no-repeat;
+  background-position: 0px -926px;
+}

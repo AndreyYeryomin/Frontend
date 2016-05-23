@@ -1,0 +1,10 @@
+{
+    "direction": "right|bottom",
+    "dir": "C:\Users\Andrey\Desktop\Front-end\homework\Frontend\less-2\conf\img",
+    "files": "[*]",
+    "sprite": "icons-sprite.png",
+    "httpPath": "./images",
+    "spacing": 50,
+    "retina": false,
+    "less": "./icon-sprite.less"
+}

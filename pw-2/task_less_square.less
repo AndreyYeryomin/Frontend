@@ -1,0 +1,26 @@
+@max-width: 500px;
+@max-lvls: 3;
+
+@x: 10px;
+@y: 10px;
+
+div {
+   border: 1px solid black;
+}
+
+.loop (@index: 1) when (@index < 12) {
+
+    div {
+      @step: 255/ @index + 3;
+      @cur: @step ;
+    background-color: rgb(@cur,@cur,@cur);
+       color: red; 
+       width: @max-width - 20 * (@index - 1);
+       height: @max-width - 20 * (@index - 1);
+       position: absolute;
+       left: @x - 1px;
+       top: @y - 1px;
+      .loop (@index + 1);
+   }
+}
+.loop();
