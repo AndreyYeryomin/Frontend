@@ -1,0 +1,44 @@
+<script>
+    function _1() {
+        return function _2() {
+            return 2
+        }
+        
+    }
+    var retfun = _1();
+    console.log(retfun());
+    ///
+
+    function counter() {
+        var i=0;
+        return function tick(){
+        console.log(i++);
+
+        }
+
+    }
+    var c_1 = counter(),
+            count2 = counter();
+    c_1();
+    c_1();
+    c_1();
+    c_1();
+    c_1();
+    c_1();
+   ////////////////////////
+    initTimer();
+    var msg;
+    function initTimer() {
+
+        setTimeout(function () {
+            console.log(msg);
+        },3000)
+        var msg = "Hello";
+    }
+
+    ////////
+function fibonachi(n) {
+     return n <= 1 ? n : fibonachi(n - 1) + fibonachi(n - 2);
+}
+    console.log(fibonachi(10));
+</script>
